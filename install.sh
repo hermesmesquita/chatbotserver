@@ -8,4 +8,6 @@ source ~/.bashrc
 
 nvm install 22
 
+source ~/.bashrc
+
 npx n8n
