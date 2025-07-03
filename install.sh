@@ -1,12 +1,11 @@
 #!/bin/bash
-mkdir install
-cd install
+sudo apt-get update && sudo apt-get upgrade -y
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 source ~/.bashrc
 
-nvm install 20
+nvm install 24
 
 source ~/.bashrc
 
