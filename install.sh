@@ -5,7 +5,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 source ~/.bashrc
 
-sudo apt-get install gnupg curl
+sudo apt-get install gnupg curl git
 curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
    --dearmor
@@ -16,6 +16,11 @@ sudo apt-get update
 
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
+
+git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
+cd self-hosted-ai-starter-kit
+cp .env.example .env # you should update secrets and passwords inside
+
 
 
 nvm install 24
