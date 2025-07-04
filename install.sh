@@ -3,7 +3,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-source ~/.bashrc
+source .bashrc
 
 sudo apt-get install gnupg curl git -y
 curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
@@ -25,6 +25,6 @@ cp .env.example .env # you should update secrets and passwords inside
 
 nvm install 24
 
-source ~/.bashrc
+source .bashrc
 
 npx n8n
