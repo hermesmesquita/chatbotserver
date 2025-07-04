@@ -18,7 +18,7 @@ sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 
 curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh ./get-docker.sh
+sh ./get-docker.sh
 
 rm -rf self-hosted-ai-starter-kit
 git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
