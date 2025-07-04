@@ -21,10 +21,4 @@ git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
 cd self-hosted-ai-starter-kit
 cp .env.example .env # you should update secrets and passwords inside
 
-
-
 nvm install 24
-
-source .bashrc
-
-npx n8n
