@@ -5,7 +5,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 source ~/.bashrc
 
-sudo apt-get install gnupg curl git
+sudo apt-get install gnupg curl git -y
 curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
    --dearmor
