@@ -1,9 +1,7 @@
 #!/bin/bash
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update
 
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
-source .bashrc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 sudo apt-get install apache2 snapd gnupg git -y
 curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
@@ -22,8 +20,11 @@ sudo systemctl start mongod
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
+sudo usermod -aG docker $USER
 
-rm -rf self-hosted-ai-starter-kit
-git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
-cp .env.example .env # you should update secrets and passwords inside
+# rm -rf self-hosted-ai-starter-kit
+# git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
+# cd self-hosted-ai-starter-kit
+# cp .env.example .env # you should update secrets and passwords inside
+
+echo "Saia do terminal e entre novamente."
