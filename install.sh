@@ -5,6 +5,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 sudo apt-get install nginx snapd gnupg git -y
 
+#############################################################################################################
 # Configuração proxy reverso para N8N 
 sudo echo "server {
          listen 80;
@@ -41,12 +42,16 @@ sudo echo "server {
          }
      }" > /etc/nginx/sites-available/n8n.usina.dev.br
 
-ln -s /etc/nginx/sites-available/n8n.usina.dev.br /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/n8n.usina.dev.br /etc/nginx/sites-enabled
+#############################################################################################################
+#############################################################################################################
 
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker $USER
 
-
-
-
+docker volume create n8n_data
+docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
 
 sudo snap install snapd
@@ -63,8 +68,5 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 # sudo apt-get install -y mongodb-org
 # sudo systemctl start mongod
 
-# curl -fsSL https://get.docker.com -o get-docker.sh
-# sh get-docker.sh
-# sudo usermod -aG docker $USER
 
 echo "Saia do terminal e entre novamente."
