@@ -18,10 +18,10 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 sudo usermod -aG docker $USER
 
-# source ~/.bashrc
+source ~/.bashrc
 
-# docker volume create n8n_data
-# docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+sudo docker volume create n8n_data
+sudo docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
 
 sudo snap install snapd
