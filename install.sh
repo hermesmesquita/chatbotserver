@@ -23,9 +23,9 @@ source ~/.bashrc
 sudo docker volume create n8n_data && sudo docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
 
-sudo snap install snapd
-sudo snap install --classic certbot
-sudo ln -s /snap/bin/certbot /usr/bin/certbot
+# sudo snap install snapd
+# sudo snap install --classic certbot
+# sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 # sudo certbot --nginx
 
