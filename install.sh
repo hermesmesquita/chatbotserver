@@ -18,6 +18,8 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 sudo usermod -aG docker $USER
 
+source ~/.bashrc
+
 docker volume create n8n_data
 docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
@@ -36,5 +38,4 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 # sudo apt-get install -y mongodb-org
 # sudo systemctl start mongod
 
-
-echo "Saia do terminal e entre novamente."
+docker ps 
