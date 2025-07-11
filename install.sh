@@ -5,6 +5,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 sudo apt-get install nginx snapd gnupg git -y
 
+sudo snap install snapd
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+sudo certbot --nginx
+
 #############################################################################################################
 # Configuração proxy reverso para N8N 
 
@@ -22,11 +28,6 @@ sudo usermod -aG docker $USER
 # sudo docker volume create n8n_data && sudo docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
 
-# sudo snap install snapd
-# sudo snap install --classic certbot
-# sudo ln -s /snap/bin/certbot /usr/bin/certbot
-
-# sudo certbot --nginx
 
 # curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
 #    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
