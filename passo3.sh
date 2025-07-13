@@ -6,4 +6,4 @@ sudo wget https://raw.githubusercontent.com/hermesmesquita/chatbotserver/refs/he
 
 sudo systemctl daemon-reload
 
-sudo reboot
+# sudo reboot
