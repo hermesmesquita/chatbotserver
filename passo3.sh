@@ -1,3 +1,3 @@
 #!/bin/bash
 docker volume create n8n_data 
-docker run -it --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n --restart unless-stopped docker.n8n.io/n8nio/n8n
+docker run --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n --restart unless-stopped docker.n8n.io/n8nio/n8n
