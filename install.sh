@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt-get update
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 sudo apt-get install nginx snapd gnupg git -y
 
@@ -16,6 +16,7 @@ sudo certbot --nginx
 
 sudo wget https://raw.githubusercontent.com/hermesmesquita/chatbotserver/refs/heads/main/n8n.usina.dev.br -O /etc/nginx/sites-available/n8n.usina.dev.br
 sudo ln -s /etc/nginx/sites-available/n8n.usina.dev.br /etc/nginx/sites-enabled
+sudo rm /etc/nginx/sites-enabled/default
 
 #############################################################################################################
 #############################################################################################################
@@ -23,9 +24,10 @@ sudo ln -s /etc/nginx/sites-available/n8n.usina.dev.br /etc/nginx/sites-enabled
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 sudo usermod -aG docker $USER
+sudo reboot
 
-# source ~/.bashrc
-# sudo docker volume create n8n_data && sudo docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+# sudo docker volume create n8n_data 
+#sudo docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
 
 
