@@ -11,7 +11,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 echo "*************************************************************"
 echo "CERTBOT INSTALADO. EXECUTE NO TERMINAL O SEGUINTE COMANDO"
+echo ""
 echo "  sudo certbot --nginx -d usina.dev.br -d n8n.usina.dev.br -d waha.usina.dev.br"
 echo ""
-echo ""
-echo "*************************************************************
+echo "*************************************************************"
