@@ -5,6 +5,13 @@
 
 sudo wget https://raw.githubusercontent.com/hermesmesquita/chatbotserver/refs/heads/main/n8n.usina.dev.br -O /etc/nginx/sites-available/n8n.usina.dev.br
 sudo ln -s /etc/nginx/sites-available/n8n.usina.dev.br /etc/nginx/sites-enabled
+
+sudo wget https://raw.githubusercontent.com/hermesmesquita/chatbotserver/refs/heads/main/waha.usina.dev.br -O /etc/nginx/sites-available/waha.usina.dev.br
+sudo ln -s /etc/nginx/sites-available/waha.usina.dev.br /etc/nginx/sites-enabled
+
+sudo wget https://raw.githubusercontent.com/hermesmesquita/chatbotserver/refs/heads/main/usina.dev.br -O /etc/nginx/sites-available/usina.dev.br
+sudo ln -s /etc/nginx/sites-available/usina.dev.br /etc/nginx/sites-enabled
+
 sudo rm /etc/nginx/sites-enabled/default
 
 #############################################################################################################
